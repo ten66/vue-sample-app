@@ -1,31 +1,35 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  <Todo msg="todoリストを作っていきます" />
-
+  <task-section
+    msg="Vue.js"
+  />
+  <add-section-btn />
+  <todo />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import TaskSection from './components/task-section.vue';
 import Todo from './components/Todo.vue';
+import AddSectionBtn from './components/add-section-btn.vue';
+import * as data from 'src/data';
+
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
-    Todo
+    TaskSection,
+    Todo,
+    AddSectionBtn
+  },
+  data() {
+    return {
+      sections: [] as data.Section[],
+    }
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
