@@ -43,7 +43,7 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
+body {
   height: 100vh;
   background: url(./assets/bg-moss.jpeg);
   background-position: center center;

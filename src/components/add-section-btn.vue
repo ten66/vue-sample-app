@@ -3,8 +3,6 @@
     <div>
       <button class="btn-style" @click="addSection()">Add Section</button>
     </div>
-    {{ count }}
-    
   </div>
 </template>
 
