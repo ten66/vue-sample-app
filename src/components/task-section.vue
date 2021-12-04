@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ msg }}
+    
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'TaskSection',
   props: {
-    msg: String,
+    
   },
 });
 </script>

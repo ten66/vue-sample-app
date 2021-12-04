@@ -1,6 +1,8 @@
 <template>
   <task-section
-    msg="Vue.js"
+    v-for="section in sections"
+    :key="section.id"
+    :section="section"
   />
   <add-section-btn />
   <todo />
@@ -24,7 +26,13 @@ export default defineComponent({
   },
   data() {
     return {
-      sections: [] as data.Section[],
+      sections: [
+        {
+          id: 1,
+          title: "",
+          taskList: [],
+        }
+      ] as data.Section[],
     }
   }
 });
