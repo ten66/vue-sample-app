@@ -4,19 +4,18 @@
   </header>
   <div class="d-flex p-2">
     <task-section 
-      v-for="(section, index) in sections"
-      :key="index"
+      v-for="section in sections"
+      :key="section.id"
       :section="section"
+      @delete="deleteSection"
     />
     <add-section-btn @send="addTaskSection()" />
   </div>
-  <todo />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TaskSection from './components/task-section.vue';
-import Todo from './components/Todo.vue';
 import AddSectionBtn from './components/add-section-btn.vue';
 import * as data from 'src/data';
 
@@ -24,12 +23,11 @@ export default defineComponent({
   name: 'App',
   components: {
     TaskSection,
-    Todo,
     AddSectionBtn
   },
   data() {
     return {
-      id: 1,
+      id: 0,
       sections: [] as data.Section[],
     }
   },
@@ -38,6 +36,9 @@ export default defineComponent({
       this.sections.push({id: this.id, title: "section title" + this.id});
       this.id += 1;
     },
+    deleteSection(num:number) {
+      this.sections = this.sections.filter(section => section.id !== num);
+    }
   }
 });
 </script>

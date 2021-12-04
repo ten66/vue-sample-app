@@ -1,15 +1,15 @@
 <template>
   <div class="section-card m-1">
     <div class="p-2">
-      <div class="fw-bold fs-3">
-        {{ section.title }}
-      </div>
-
-      <div>
-        
+      <div class="fw-bold fs-3 d-flex">
+        <div class="col-10">
+          {{ section.title }}
+        </div>
+        <div class="col-2">
+          <span @click="deleteSection(section.id)"><i class="fas fa-backspace"></i></span>
+        </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -24,6 +24,11 @@ export default defineComponent({
   data() {
     return {
       tasks: [],
+    }
+  },
+  methods: {
+    deleteSection(id:number) {
+      this.$emit("delete", id)
     }
   }
 });
