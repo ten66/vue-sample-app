@@ -14,13 +14,9 @@ export default defineComponent({
   data() {
     return {
       count: 0,
-      childData: "Hello Vue!"
     }
   },
   methods: {
-    addCount() {
-      return this.count++;
-    },
     addSection() {
       this.$emit("send")
     },
