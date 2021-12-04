@@ -1,7 +1,6 @@
 export interface Section {
   id: number;
   title: string;
-  taskList: Task[];
 }
 
 export interface Task {

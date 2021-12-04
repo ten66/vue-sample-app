@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="m-1">
     <div>
-      <button class="btn-style" @click="count += 1">Add Section</button>
+      <button class="btn-style" @click="addSection()">Add Section</button>
     </div>
     {{ count }}
+    
   </div>
 </template>
 
@@ -15,14 +16,23 @@ export default defineComponent({
   data() {
     return {
       count: 0,
+      childData: "Hello Vue!"
     }
+  },
+  methods: {
+    addCount() {
+      return this.count++;
+    },
+    addSection() {
+      this.$emit("send")
+    },
   }
 })
 </script>
 
 <style scoped>
 .btn-style {
-  background-color: red;
-  border-radius: 10px;
+  min-width: 150px;
+  border-radius: 5px;
 }
 </style>
