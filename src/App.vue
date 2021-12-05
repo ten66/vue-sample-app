@@ -1,8 +1,8 @@
 <template>
-  <header>
-    <h1>Task Section App</h1>
+  <header class="p-2">
+    <h1>Task Management App</h1>
   </header>
-  <div class="d-flex p-2">
+  <div class="d-flex align-items-start p-2">
     <task-section 
       v-for="section in sections"
       :key="section.id"
@@ -52,4 +52,5 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 </style>
