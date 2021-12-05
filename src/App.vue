@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <h1>Task Section App</h1>
+  <header class="p-2">
+    <h1>Task Management App</h1>
   </header>
   <div class="d-flex p-2">
     <task-section 
