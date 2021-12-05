@@ -11,8 +11,12 @@
         </div>
       </div>
 
-      <task />
-
+      <task 
+        v-for="task in tasks"
+        :key="task.id"
+        :task="task"
+      />
+      <task-new @addTask="addTask" />
     </div>
   </div>
 </template>
@@ -20,18 +24,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Task from './task.vue';
+import TaskNew from './task-new.vue';
 import * as data from 'src/data';
 
 export default defineComponent({
   name: 'TaskSection',
   components: {
-    Task
+    Task,
+    TaskNew
   },
   props: {
     section: Object,
   },
   data() {
     return {
+      id: 0,
       title: "",
       tasks: [] as data.Task[],
     }
@@ -41,7 +48,12 @@ export default defineComponent({
       this.$emit("delete", id)
     },
     addTask() {
-      return "";
+      this.tasks.push({
+        id: this.id,
+        title: "",
+        content: "content content content"
+      })
+      this.id += 1;
     }
   }
 });
