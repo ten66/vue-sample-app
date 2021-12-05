@@ -10,7 +10,7 @@
             <p class="mb-0">content</p>
           </div>
           <div class="px-2">
-            <p>content content content content content</p>
+            <p>{{ task.content }}</p>
           </div>
           <div class="d-flex justify-content-end ">
             <div class="px-1"><i class="fas fa-edit"></i></div>
