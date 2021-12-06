@@ -1,5 +1,5 @@
 
 module.exports = {
-  publicPath: '/project-name/',
+  publicPath: '/vue-task-management-app/',
   outputDir: 'docs'
 }
