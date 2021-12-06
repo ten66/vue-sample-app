@@ -29,6 +29,7 @@ export default defineComponent({
 .add-task-btn:hover {
   border-radius: 5px;
   cursor: pointer;
+  color: white;
   background: grey;
 }
 </style>

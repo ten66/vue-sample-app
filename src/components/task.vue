@@ -7,14 +7,14 @@
         </div>
         <div>
           <div class="pt-2">
-            <p class="mb-0">content</p>
+            <p class="mb-0">content:</p>
           </div>
           <div class="px-2">
             <p>{{ task.content }}</p>
           </div>
           <div class="d-flex justify-content-end ">
-            <div class="px-1"><i class="fas fa-edit"></i></div>
-            <div class="px-1"><i class="fas fa-trash-alt"></i></div>
+            <div class="px-1 icon"><i class="fas fa-edit"></i></div>
+            <div class="px-1 icon" @click="deleteTask(task.id)"><i class="fas fa-trash-alt"></i></div>
           </div>
         </div>
       </div>
@@ -30,6 +30,11 @@ export default defineComponent({
   props: {
     task: Object,
   },
+  methods: {
+    deleteTask(taskId: number) {
+      this.$emit("delete", taskId);
+    }
+  }
 })
 </script>
 
@@ -38,5 +43,11 @@ export default defineComponent({
   border: 1px solid;
   border-radius: 5px;
   box-shadow: 1px 1px 3px ;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: white;
+  background: grey;
 }
 </style>
