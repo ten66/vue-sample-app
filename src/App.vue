@@ -9,7 +9,7 @@
       :section="section"
       @delete="deleteSection"
     />
-    <add-section-btn @send="addTaskSection()" />
+    <add-section-btn @addSection="addTaskSection" />
   </div>
 </template>
 
@@ -32,8 +32,8 @@ export default defineComponent({
     }
   },
   methods: {
-    addTaskSection() {
-      this.sections.push({id: this.id, title: "section title" + this.id});
+    addTaskSection(title: string) {
+      this.sections.push({id: this.id, title: title});
       this.id += 1;
     },
     deleteSection(num:number) {
@@ -44,6 +44,7 @@ export default defineComponent({
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 body {
   height: 100vh;
   background: url(./assets/bg-moss.jpeg);
@@ -51,12 +52,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Playfair Display', serif;
 }
 
 header {
-  background: grey;
+  background: black;
   color: white;
-  opacity: .8;
+  opacity: .5;
 }
 
 .scroll {

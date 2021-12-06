@@ -1,10 +1,9 @@
 <template>
   <div class="section-card m-1">
     <div class="p-2">
-      <div class="fw-bold fs-3 d-flex pb-3">
-        <div class="col-10">
-          <label for="sectionTitle" class=""></label>
-          <input id="sectionTitle" type="text" v-model="this.title" class="col-10">
+      <div class="fw-bold fs-3 d-flex pb-1">
+        <div class="col-10 d-flex align-items-center">
+          <h4 class="border-bottom border-4">{{ section.title }}</h4>
         </div>
         <div class="col-2">
           <span class="delete-btn p-1" @click="deleteSection(section.id)"><i class="fas fa-backspace"></i></span>
