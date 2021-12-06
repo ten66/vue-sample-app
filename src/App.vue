@@ -2,7 +2,7 @@
   <header class="p-2">
     <h1>Task Management App</h1>
   </header>
-  <div class="d-flex align-items-start p-2">
+  <div class="d-flex align-items-start p-2 scroll">
     <task-section 
       v-for="section in sections"
       :key="section.id"
@@ -51,6 +51,16 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+header {
+  background: grey;
+  color: white;
+  opacity: .8;
+}
+
+.scroll {
+  overflow: scroll;
 }
 
 </style>
