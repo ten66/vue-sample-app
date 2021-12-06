@@ -7,7 +7,7 @@
           <input id="sectionTitle" type="text" v-model="this.title" class="col-10">
         </div>
         <div class="col-2">
-          <span @click="deleteSection(section.id)"><i class="fas fa-backspace"></i></span>
+          <span class="delete-btn p-1" @click="deleteSection(section.id)"><i class="fas fa-backspace"></i></span>
         </div>
       </div>
 
@@ -15,6 +15,7 @@
         v-for="task in tasks"
         :key="task.id"
         :task="task"
+        @delete="deleteTask"
       />
       <task-new @addTask="addTask" />
     </div>
@@ -54,6 +55,9 @@ export default defineComponent({
         content: "content content content"
       })
       this.id += 1;
+    },
+    deleteTask(num: number) {
+      this.tasks = this.tasks.filter(task => task.id !== num);
     }
   }
 });
@@ -68,5 +72,12 @@ export default defineComponent({
   box-shadow: 3px 3px 5px;
   background: white;
   opacity: .7;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  color: white;
+  background: grey;
+  border-radius: 3px;
 }
 </style>
