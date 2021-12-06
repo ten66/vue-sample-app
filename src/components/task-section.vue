@@ -71,7 +71,7 @@ export default defineComponent({
   border-radius: 5px;
   box-shadow: 3px 3px 5px;
   background: white;
-  opacity: .7;
+  opacity: .8;
 }
 
 .delete-btn:hover {
