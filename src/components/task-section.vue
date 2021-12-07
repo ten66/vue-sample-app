@@ -27,6 +27,7 @@ import Task from './task.vue';
 import TaskNew from './task-new.vue';
 import * as data from 'src/data';
 
+
 export default defineComponent({
   name: 'TaskSection',
   components: {
@@ -70,7 +71,7 @@ export default defineComponent({
   border-radius: 5px;
   box-shadow: 3px 3px 5px;
   background: white;
-  opacity: .8;
+  opacity: .9;
 }
 
 .delete-btn:hover {

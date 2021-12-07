@@ -4,14 +4,14 @@
       <div class="p-2">
         <div>
           <label for="task">Task Name:</label>
-          <input id="task" type="text" class="col-12" placeholder="Task Name">
+          <input id="task" type="text" class="col-12 fw-bold" placeholder="Task Name">
         </div>
         <div>
           <div class="pt-2">
-            <p class="mb-0">content:</p>
+            <p class="mb-0">Content:</p>
           </div>
           <div class="px-2">
-            <p v-if="!edit">{{ contents }}</p>
+            <p v-if="!edit" class="fw-bold">{{ contents }}</p>
             <textarea v-else
               class="col-12"
               cols="30"
@@ -72,6 +72,7 @@ export default defineComponent({
   cursor: pointer;
   color: white;
   background: grey;
+  border-radius: 5px;
 }
 
 </style>

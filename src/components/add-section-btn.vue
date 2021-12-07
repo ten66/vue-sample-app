@@ -5,7 +5,7 @@
     </div>
     <div v-else class="input-form">
       <div class="p-2">
-        <input type="text" class="col-12" v-model="sectionTitle">
+        <input type="text" class="col-12" v-model="sectionTitle" placeholder="Section Name">
       </div>
       <div class="d-flex justify-content-end p-2">
         <div class="px-1" @click="addSection()"><button class="input-btn">Add</button></div>
@@ -42,18 +42,19 @@ export default defineComponent({
   border: none;
   width: 15rem;
   border-radius: 5px;
-  opacity: .8;
+  opacity: .9;
   box-shadow: 3px 3px 5px;
 }
 
 .input-btn {
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   box-shadow: 1px 1px 3px;
 }
 
 .input-btn:hover {
   background: grey;
+  border-radius: 5px;
   color: white;
 }
 
