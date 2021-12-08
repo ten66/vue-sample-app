@@ -63,7 +63,7 @@ export default defineComponent({
   border: none;
   width: 15rem;
   border-radius: 5px;
-  opacity: .8;
+  opacity: .9;
   box-shadow: 3px 3px 5px;
 }
 

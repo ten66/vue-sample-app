@@ -66,9 +66,8 @@ body {
 }
 
 header {
-  background: black;
   color: white;
-  opacity: .5;
+  background: rgba(0,0,0,.5);
 }
 
 .scroll {
