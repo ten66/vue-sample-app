@@ -17,7 +17,7 @@
               cols="30"
               rows="10" 
               v-model="contents"
-              @blur="edit = false" />
+              @blur="edit=false" />
           </div>
           <div class="d-flex justify-content-end ">
             <div class="px-1 icon" :style="starStyle" @click="changeColor"><i class="fas fa-star"></i></div>

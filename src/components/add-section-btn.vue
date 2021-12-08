@@ -48,7 +48,7 @@ export default defineComponent({
 
 .input-btn {
   border: none;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   box-shadow: 1px 1px 3px;
 }
 
