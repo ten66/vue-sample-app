@@ -4,7 +4,7 @@
       <div class="p-2">
         <div>
           <label for="task">Task Name:</label>
-          <input id="task" type="text" class="col-12 fw-bold" placeholder="Task Name">
+          <input id="task" type="text" class="col-12 fw-bold" placeholder="Task Name" value="">
         </div>
         <div>
           <div class="pt-2">
