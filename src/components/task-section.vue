@@ -68,11 +68,11 @@ export default defineComponent({
       this.editSecTitle = false;
       this.secTitle = "";
     },
-    addTask() {
+    addTask(taskTitle:string) {
       this.tasks.push({
         id: this.id,
-        title: "",
-        content: ""
+        title: taskTitle,
+        content: "",
       })
       this.id += 1;
     },

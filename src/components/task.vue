@@ -3,8 +3,8 @@
     <div class="pt-2 task-card">
       <div class="p-2">
         <div>
-          <label for="task">Task Name:</label>
-          <input id="task" type="text" class="col-12 fw-bold" placeholder="Task Name" value="">
+          <p class="mb-0">Task Name:</p>
+          <div class="px-2 fw-bold fs-4">{{ task.title }}</div>
         </div>
         <div>
           <div class="pt-2">
